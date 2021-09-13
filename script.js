@@ -1,3 +1,5 @@
+var cityName = document.getElementById('city')
+
 var apiRequest = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=15a2f6e975005b96c0df56340849949d";
 
 var responseText = document.getElementById("response-text");
