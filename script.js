@@ -1,21 +1,21 @@
-var cityName = document.getElementById('city')
+var cityName = document.getElementById("city");
 
-var apiRequest = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=15a2f6e975005b96c0df56340849949d";
-
-var responseText = document.getElementById("response-text");
+var responseText = document.getElementById("responseText");
 
 function getWeather() {
+  var apiRequest =
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    cityName.value +
+    "&appid=15a2f6e975005b96c0df56340849949d&units=imperial";
+  console.log(apiRequest);
   fetch(apiRequest)
     .then(function (res) {
       return res.json();
     })
     .then(function (response) {
-      console.log(response.weather);
-      if (response.status === 200) {
-        responseText.textContent = response.status;
-      } else {
-        console.log("error");
-      }
+      console.log(response);
+      responseText.textContent = response.list[0].main.feels_like;
+      console.log(response.city.name);
     });
 }
-document.getElementById("city").addEventListener("click", getWeather);
+document.getElementById("submitCity").addEventListener("click", getWeather);
