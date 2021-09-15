@@ -20,7 +20,7 @@ function getWeather() {
     });
 }
 document.getElementById("submitCity").addEventListener("click", getWeather);
-document.getElementById("city").addEventListener("click", getWeather);
+
 
 function displayEvents(data) {
   if (data.length === 0) {
