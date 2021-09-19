@@ -1,4 +1,5 @@
 var cityName = document.getElementById("city");
+
 var eventEl = document.getElementById("events-container");
 var eightDay = document.getElementById("dailyForecast");
 
@@ -14,8 +15,8 @@ function displayWeather(data) {
     morningTemp = Math.round(data[i].temp.morn);
     eveTemp = Math.round(data[i].temp.eve);
 
-    var weatherContainer =document.createElement("contianer");
-    document.getElementById('date').appendChild(weatherContainer);
+    var weatherContainer = document.createElement("contianer");
+    document.getElementById("date").appendChild(weatherContainer);
     weatherContainer.setAttribute("class", "weatherCard");
 
     var wCard = document.createElement("div");
@@ -27,26 +28,23 @@ function displayWeather(data) {
     weatherIcon.src = "http://openweathermap.org/img/wn/" + iconCode + ".png";
     document.getElementById("date").appendChild(weatherIcon);
     weatherIcon.setAttribute("class", "wImage");
-    
-    var conditions = document.createElement('div');
+
+    var conditions = document.createElement("div");
     conditions.textContent = eightDay;
-    document.getElementById('date').appendChild(conditions);
-    conditions.setAttribute('class', 'wConditions');
+    document.getElementById("date").appendChild(conditions);
+    conditions.setAttribute("class", "wConditions");
 
-    var amTemp = document.createElement('div');
-    amTemp.textContent = "Morning Temperature: "+ morningTemp;
-    document.getElementById('date').appendChild(amTemp);
-    amTemp.setAttribute('class', 'earlyTemp');
+    var amTemp = document.createElement("div");
+    amTemp.textContent = "Morning Temperature: " + morningTemp;
+    document.getElementById("date").appendChild(amTemp);
+    amTemp.setAttribute("class", "earlyTemp");
 
-    var pmTemp = document.createElement('div');
+    var pmTemp = document.createElement("div");
     pmTemp.textContent = "Evening Temperature: " + eveTemp;
-    document.getElementById('date').appendChild(pmTemp);
-    pmTemp.setAttribute('class', 'eveTemp');
-
-    
+    document.getElementById("date").appendChild(pmTemp);
+    pmTemp.setAttribute("class", "eveTemp");
 
     console.log(newDate, weatherIcon, eightDay, morningTemp, eveTemp);
-
   }
 }
 
@@ -84,58 +82,3 @@ function gps(lat, long) {
     });
 }
 document.getElementById("submitCity").addEventListener("click", getWeather);
-
-
-function displayEvents(data) {
-  if (data.length === 0) {
-    repoContainerEl.textContent = 'No events found.';
-    return;
-  };
-
-  for (var i = 0; i < data.length; i++){
-    // Need event API data for this
-    var imgData = data[i]...
-    var eventTitle = data[i]...
-    var description = data[i]...
-
-    //Create card div
-    var card = document.createElement('div');
-    card.setAttribute('class', 'card');
-    
-    //Create img element for card
-    var img = document.createElement('img');
-    img.setAttribute('src', imgData);
-
-    // Create div container for event name and description in card.
-    var container = document.createElement('div');
-    container.setAttribute('class', 'container');
-    
-    // Create event name element
-    var eventName = document.createElement('h4');
-    eventName.setAttribute('class', 'event-title');
-    eventName.textContent = eventTitle;
-    
-    // Create description element
-    var eventDescrip = document.createElement('p');
-    eventDescrip.setAttribute('class', 'event-description');
-    eventDescrip.textContent = description;
-    
-
-    //Append elements for HTML
-    card.appendChild(eventEl);
-    img.appendChild(card);
-    container.appendChild(card);
-    eventName.appendChild(container);
-    eventDescrip.appendChild(container);
-  };
-
-  
-  
-
-  
-  
-  
-  
-  
-
-}
