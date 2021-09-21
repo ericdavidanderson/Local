@@ -6,10 +6,19 @@ var eightDay = document.getElementById("dailyForecast");
 var responseText = document.getElementById("responseText");
 
 function displayWeather(data) {
+  document.getElementById("date").innerHTML = "";
   console.log(data);
   for (var i = 0; i < data.length; i++) {
+    var modifier = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
     var date = data[i].dt;
-    var newDate = new Date(date * 1000);
+    var modDate = new Date(date * 1000);
+    var newDate = modDate.toLocaleDateString("en-US", modifier);
+
     iconCode = data[i].weather[0].icon;
     eightDay = data[i].weather[0].main;
     morningTemp = Math.round(data[i].temp.morn);
