@@ -7,7 +7,7 @@
   font-size:inherit;
   background-color: grey;
 }
-p{
+#weather {
   display: inline-table;
   flex-wrap: wrap;
   flex-direction:row;
