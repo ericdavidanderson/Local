@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-body,
+body { 
+    padding-top: 500px; 
+    
+
+}
 html {
     margin: 0;
     padding: 0;
@@ -47,4 +51,8 @@ html {
     width: 30em;
     margin: 0 auto;
     line-height: 1.625;
+    align-items: center;
+}
+p {
+    align-content:center
 }

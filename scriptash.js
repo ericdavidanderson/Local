@@ -1,4 +1,4 @@
-var heroShinker  = function () {
+var heroNav  = function () {
     var hero = $(".hero-nav"),
         heroHeight = $(".hero-nav").outerHeight(true);
     $(hero).parent().css("padding-top", heroHeight);
