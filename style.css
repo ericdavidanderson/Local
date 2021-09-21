@@ -15,17 +15,19 @@ p{
   max-width: 14%;
   padding-right: 5px;
 }
+
 .weatherCard{
   border-radius: 15px;
   padding: 25px;
   border-color: maroon;
   border-width: 3px;
 }
-.weather{
+.date{
   background-color: lightcoral;
   background-color: lightgreen;
   justify-content: center;
 }
+
 .wImage{
   max-block-size: 150px;
   justify-content: right;
@@ -63,7 +65,7 @@ html {
     background-position: center;
     overflow: hidden;
 }
-    .hero-nav__inner {
+    /* .hero-nav__inner {
         z-index: 1;
     }
     h1 {
@@ -84,7 +86,7 @@ html {
        background: rgba(#000, 0.8);
         
     
-}
+} */
 .page-content {
     width: 30em;
     margin: 0 auto;
