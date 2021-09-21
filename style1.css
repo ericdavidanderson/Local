@@ -7,8 +7,9 @@
 body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
   background-image: url('MtRainier.jpg');
-  background-size: cover;
-  background-position: top center;
+  background-position: 50% 0%;
+  background: center top;
+
 }
 
 .background {
@@ -16,6 +17,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+
 }
 
 header {
@@ -89,7 +91,7 @@ main {
   text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
 }
 
-.current .hilow {
+.current .minmax {
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
