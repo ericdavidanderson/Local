@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-body,
+body { 
+    padding-top: 500px; 
+    
+
+}
 html {
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ html {
     align-items: center;
     height: 400px;
     min-height: 105px;
-    background-image: url(https://images.unsplash.com/photo-1442606383395-175ee96ed967?q=80&fm=jpg&s=5c8c74be9bc91b47c79a1aaf92264be5);
+    background-image: url('seattle2.jpeg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -47,4 +51,8 @@ html {
     width: 30em;
     margin: 0 auto;
     line-height: 1.625;
+    align-items: center;
+}
+p {
+    align-content:center
 }
