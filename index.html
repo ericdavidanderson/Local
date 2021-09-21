@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local: Events and Weather</title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local: Events and Weather</title>
+  <link rel = style-sheet href="styleash.css"></link>
+  <link rel = 'style sheet' href="style.css"></link/>
+ 
 </head>
+
 <body>
+  <div class="hero-nav">
+    <div class="hero-nav__inner">
+        <h1>Local</h1>
+        <div class="hero-nav__button">
+            <a href="#" class="btn"></a>
+        </div>
+    </div>
+  </div>
+  <div>
     <h1> Enter city in the search bar below to find weather and events</h1>
     <div>
       Search for a City:
       <input type="text" id="city" />
       <button id="submitCity">Submit</button>
     </div>
-   
-   
-   <!-- This is just a rough draft for where our information can be outputed. I think we should consider keeping our search simple to the next five days for a start
-we can always make it more complex for searching more into the future if we have time -->
-    <div id="currentCity"></div>
-    <div id="5dayForecast"></div>
-    <div id="events-container"></div>
-
-    <span id="response"></span>
+  </div>
+  <div class="page-content">
+    <div id="weather"></div>
+    <span id="response">
+      <div id="Events"></div>
+    </span>
+  </div>
   
-   
-</body>
-
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
- <script src="script.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+<script src="script.js"></script>
+<script src="scriptEric.js"></script>
+<script src="scriptash.js"></script>
+
+   
 </body>
 </html>
 

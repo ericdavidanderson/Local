@@ -33,6 +33,9 @@ function displayResults (weather) {
   minmax.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
 
+var datetime = document.createElement('p');
+document.getElementById('datetime')
+
 // having trouble with this just taken from stack overflow as a starter
 function datetime() {
   var now     = new Date(); 
@@ -55,10 +58,14 @@ function datetime() {
   }   
   var dateTime = year+'/'+month+'/'+day+' '+hour+':'+minute;   
    return dateTime;
+   console.log(dateTime);
+
 }
 
-setInterval(function(datetime){
+setInterval (datetime)
+{
   currentTime = datetime();
   document.datetime("Date & Time").innerHTML = currentTime;
-}, 1000);
-  
+} 1000;
+
+

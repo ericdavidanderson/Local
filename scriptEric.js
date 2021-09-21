@@ -7,6 +7,8 @@ var responseText = document.getElementById("responseText");
 
 function displayWeather(data) {
   console.log(data);
+  document.getElementById('weather').textContent = '';
+
   for (var i = 0; i < data.length; i++) {
     var date = data[i].dt;
     var newDate = new Date(date * 1000);
@@ -16,7 +18,7 @@ function displayWeather(data) {
     eveTemp = Math.round(data[i].temp.eve);
 
     var weatherContainer = document.createElement("contianer");
-    document.getElementById("date").appendChild(weatherContainer);
+    document.getElementById("weather").appendChild(weatherContainer);
     weatherContainer.setAttribute("class", "weatherCard");
 
     var wCard = document.createElement("div");
@@ -26,22 +28,22 @@ function displayWeather(data) {
 
     var weatherIcon = document.createElement("img");
     weatherIcon.src = "http://openweathermap.org/img/wn/" + iconCode + ".png";
-    document.getElementById("date").appendChild(weatherIcon);
+    document.getElementById("weather").appendChild(weatherIcon);
     weatherIcon.setAttribute("class", "wImage");
 
     var conditions = document.createElement("div");
     conditions.textContent = eightDay;
-    document.getElementById("date").appendChild(conditions);
+    document.getElementById("weather").appendChild(conditions);
     conditions.setAttribute("class", "wConditions");
 
     var amTemp = document.createElement("div");
     amTemp.textContent = "Morning Temperature: " + morningTemp;
-    document.getElementById("date").appendChild(amTemp);
+    document.getElementById("weather").appendChild(amTemp);
     amTemp.setAttribute("class", "earlyTemp");
 
     var pmTemp = document.createElement("div");
     pmTemp.textContent = "Evening Temperature: " + eveTemp;
-    document.getElementById("date").appendChild(pmTemp);
+    document.getElementById("weather").appendChild(pmTemp);
     pmTemp.setAttribute("class", "eveTemp");
 
     console.log(newDate, weatherIcon, eightDay, morningTemp, eveTemp);

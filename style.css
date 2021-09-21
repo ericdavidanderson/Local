@@ -6,3 +6,32 @@
   font-size:inherit;
   background-color: grey;
 }
+p{
+  display: inline-table;
+  flex-wrap: wrap;
+  flex-direction:row;
+  background-color: lightskyblue;
+  max-width: 14%;
+  padding-right: 5px;
+}
+.weatherCard{
+  border-radius: 15px;
+  padding: 25px;
+  border-color: maroon;
+  border-width: 3px;
+}
+.date{
+  background-color: lightcoral;
+  background-color: lightgreen;
+  justify-content: center;
+}
+.wImage{
+  max-block-size: 150px;
+  justify-content: right;
+}
+img {
+  color: black;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
