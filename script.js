@@ -1,6 +1,10 @@
 var clientID = 'MjMzNzgxODJ8MTYzMTc2MDYyMS4wNjM0OTEz';
 var clientSecret = 'c94dd83f29783aec2810034b6e20d912b5b513475272fda1a8df684c3469608';
-var cityName = document.getElementById("city")
+var cityName = document.getElementById("city");
+var searchHistory = JSON.parse(localStorage.getItem('city')) || [];
+var clearBtn = document.getElementById('clear');
+
+console.log(searchHistory);
 
 function getEvents() {
   fetch("https://api.seatgeek.com/events?venue.city=" + cityName.value + "&client_id=MjMzNzgxODJ8MTYzMTc2MDYyMS4wNjM0OTEz", {
@@ -82,7 +86,10 @@ function renderEvents(response) {
 
 }
 
-document.getElementById("submitCity").addEventListener("click", getEvents);
+document.getElementById("submitCity").addEventListener("click", function (){
+  getEvents();
+  storageLocal();
+});
 
 var heroShinker = function () {
   var hero = $(".hero-nav"),
@@ -101,4 +108,54 @@ var heroShinker = function () {
   });
 };
 
+
+function storageLocal() {
+  var searchTerm = cityName.value
+  searchHistory.push(searchTerm)
+  localStorage.setItem('city', JSON.stringify(searchHistory));
+  console.log(searchHistory);
+  
+  renderHistory();
+};
+
+clearBtn.addEventListener('click', function(){
+  searchHistory.localStorage.setItem('list-group') = []
+  document.querySelector(".list-group").innerHTML = "";
+});
+
+
+function renderHistory(){
+  getList();
+  // var historyEl = document.createElement('ul');
+  // historyEl.setAttribute('class', 'list-group')
+  // document.getElementById('search-container').appendChild(historyEl);
+  // for (var i = 0; i < searchHistory.length; i++)
+  //   var historyItem = document.createElement('li');
+    
+  //   historyItem.setAttribute('type', 'text');
+  //   historyItem.setAttribute('value', searchHistory[i]);
+  //   historyItem.setAttribute('class', 'list-group-item');
+  //   historyItem.textContent = searchHistory[i];
+  //   historyEl.appendChild(historyItem);
+  //   console.log(historyItem);
+};
+
 heroShinker();
+
+var getList = function() {
+  //get the stored inofmation
+  var list = JSON.parse(localStorage.getItem('city')) || [];
+  var template = "";
+  list.forEach(function(listItem) {
+    template += `
+      <li class="">${listItem}</li>
+    `;
+
+    document.querySelector(".list-group").innerHTML = template;
+  });
+}
+
+
+// set the localstorage to []
+
+// document.querySelector(".list-group").innerHTML = "";

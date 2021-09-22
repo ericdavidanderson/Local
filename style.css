@@ -20,12 +20,18 @@
 
 #Events{
   justify-content: center;
-  margin-left: 800px;
+  /* margin-left: 800px; */
   max-width: 400px;
   
 }
 
-
+.event-card{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  
+}
 
 
 .date {
