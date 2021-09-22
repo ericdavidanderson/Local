@@ -119,8 +119,11 @@ function storageLocal() {
 };
 
 clearBtn.addEventListener('click', function(){
-  localStorage.setItem(searchHistory) = [];
+  console.log(searchHistory);
+  localStorage.clear(searchHistory);
   document.querySelector(".list-group").innerHTML = "";
+  document.querySelector('#weather').innerHTML = "";
+  document.querySelector('#Events').innerHTML = "";
 });
 
 
@@ -145,6 +148,7 @@ heroShinker();
 var getList = function() {
   //get the stored inofmation
   var list = JSON.parse(localStorage.getItem('city')) || [];
+  console.log(list);
   var template = "";
   list.forEach(function(listItem) {
     template += `
