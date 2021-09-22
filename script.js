@@ -1,7 +1,7 @@
 var clientID = 'MjMzNzgxODJ8MTYzMTc2MDYyMS4wNjM0OTEz';
 var clientSecret = 'c94dd83f29783aec2810034b6e20d912b5b513475272fda1a8df684c3469608';
 var cityName = document.getElementById("city");
-var searchHistory = JSON.parse(localStorage.getItem('city')) || [];
+var searchHistory = JSON.parse(localStorage.getItem(cityName)) || [];
 var clearBtn = document.getElementById('clear');
 
 console.log(searchHistory);
@@ -119,7 +119,7 @@ function storageLocal() {
 };
 
 clearBtn.addEventListener('click', function(){
-  searchHistory.localStorage.setItem('list-group') = []
+  localStorage.setItem(searchHistory) = [];
   document.querySelector(".list-group").innerHTML = "";
 });
 
@@ -148,12 +148,12 @@ var getList = function() {
   var template = "";
   list.forEach(function(listItem) {
     template += `
-      <li class="">${listItem}</li>
+      <li class="list-group-item">${listItem}</li>
     `;
 
     document.querySelector(".list-group").innerHTML = template;
   });
-}
+};
 
 
 // set the localstorage to []
