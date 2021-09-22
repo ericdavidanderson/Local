@@ -71,7 +71,7 @@ html {
   align-items: center;
   height: 400px;
   min-height: 105px;
-  background-image: url("seattle2.jpeg");
+  background-image: url("../images/seattle2.jpeg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
