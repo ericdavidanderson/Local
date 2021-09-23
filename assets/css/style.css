@@ -4,41 +4,39 @@
   height: 60px;
   color: blue;
   font-size: inherit;
-  background-color: grey;
+  background-color: rgb(195, 188, 196);
 }
 .weatherCard {
- 
   display: inline-table;
   flex-wrap: wrap;
-  flex-direction: row; 
-  
+  flex-direction: row;
+
   border-radius: 15px;
   padding: 5px;
   border-color: maroon;
   border-width: 3px;
 }
 
-#Events{
+#Events {
   justify-content: center;
+  margin-left: 100px;
   /* margin-left: 800px; */
   max-width: 400px;
-  
 }
 
-.event-card{
+.event-card {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  
-  
 }
-
 
 .date {
   background-color: lightcoral;
-  background-color: lightgreen;
+  background-color: rgb(151, 128, 147);
+
   justify-content: center;
   border-radius: 15px;
+  color: linen;
 }
 
 .wImage {
@@ -54,6 +52,8 @@ img {
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 body {
   padding-top: 500px;
+  background-color: rgb(117, 98, 143);
+  color: rgb(245, 167, 22);
 }
 html {
   margin: 0;
@@ -99,11 +99,8 @@ html {
     
 } */
 .page-content {
-  
   margin: 0 auto;
   line-height: 1.625;
   align-items: center;
   justify-content: center;
- }
-
-
+}
