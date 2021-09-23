@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Local: Events and Weather</title>
-    
-  </head>
-  <body>
-    <h1>Enter city in the search bar below to find weather and events</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local: Events and Weather</title>
+  <link rel = 'stylesheet' href="./assets/css/style.css"></link/>
+ 
+</head>
+
+
+
     <div>
-      Search for a City:
-      <input type="text" id="city" />
-      <button id="submitCity">Submit</button>
+     <h1> Enter city in the search bar below to find weather and events</h1>
+     <div>
+       Search for a City:
+       <input type="text" id="city" />
+       <button id="submitCity">Submit</button>
+     </div>
+    </div>
+  
+    <div id="weather"></div>
+
+    <div class="page-content"></div>
+
+      <span id="response">
+         <div id="Events"></div>
+      </span>
     </div>
 
+    <body>
+   <div class="hero-nav">
+     <div class="hero-nav__inner">
+        <h1>Local</h1>
+        <div class="hero-nav__button">
+            <a href="#" class="btn"></a>
+        </div>
+     </div>
+    </div>
   
-            
-            <div id="date"></div>
-           
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
 
-          
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/scriptash.js"></script>
+<script src="./assets/js/scriptEric.js"></script>
 
-    <script src="scriptEric.js"></script>
-  </body>
+
+
+
+   
+</body>
 </html>
